@@ -20,15 +20,15 @@ app.disable('x-powered-by');
 app.use(cors());
 
 
-// require('./auth/authentication_passport')(passport);
+require('./auth/authentication_passport')(passport);
 // DB module
 
-// app.use((req, res, next) => {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     res.header("X-HTTP-Method-Override", "PATCH, GET, POST, PATH, DELETE");
-//     next();
-// })
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("X-HTTP-Method-Override", "PATCH, GET, POST, PATH, DELETE");
+    next();
+})
 const db = require('../config/initializer/database');
 
 
@@ -38,7 +38,7 @@ db.once('open', function () {
 });
 
 // Passport initialization
-const initializePassport = require('./auth/authentication_passport')(passport)
+require('./auth/authentication_passport')(passport)
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}))
@@ -78,6 +78,5 @@ app.use('/api', appRouter);
 
 // Errors Log
 app.use(errorsLog);
-
 
 module.exports = app;
