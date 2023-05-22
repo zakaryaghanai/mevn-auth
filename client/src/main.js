@@ -4,6 +4,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// import '@Assets/css/tailwind.css';
+
 Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {

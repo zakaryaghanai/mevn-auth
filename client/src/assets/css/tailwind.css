@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-search {
+    @apply bg-red-500;
+    /*@apply h-12 px-2;*/
+    /*@apply text-xl;*/
+    /*@apply placeholder-white;*/
+    /*@apply bg-purple-300;*/
+
+    /*@apply hover:bg-purple-500;*/
+    /*@apply hover:bg-purple-100;*/
+    /*@apply hover:text-purple-700;*/
+    /*@apply hover:outline-none;*/
+    /*@apply hover:ring-2;*/
+    /*@apply hover:ring-purple-600;*/
+
+    /*@apply focus:bg-purple-100;*/
+    /*@apply focus:outline-none;*/
+    /*@apply focus:ring-2;*/
+    /*@apply focus:ring-purple-600;*/
+    /*@apply focus:border-transparent ;*/
+
+    /*&:hover {*/
+    /*     @apply .text-teal;*/
+    /* }*/
+
+}

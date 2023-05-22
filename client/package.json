@@ -11,6 +11,8 @@
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "jquery": "^3.5.1",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
     "secure-ls": "^1.2.6",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
